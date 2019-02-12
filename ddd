@@ -1,0 +1,13 @@
+--- ZippyshareCom.py.bad        2015-03-11 14:14:56.000000000 +0200
++++ ZippyshareCom.py    2015-03-18 22:30:55.912851113 +0200
+@@ -23,9 +23,9 @@
+
+     COOKIES = [("zippyshare.com", "ziplocale", "en")]
+
+-    NAME_PATTERN    = r'("\d{6,}/"[ ]*\+.+?"/|<title>Zippyshare.com - )(?P<N>.+?)("|</title>)'
++    NAME_PATTERN    = r'("[a-zA-Z0-9/]*/"\+\(.+?\)\+"/|<title>Zippyshare.com - )(?P<N>.+?)("|</title>)'
+     SIZE_PATTERN    = r'>Size:.+?">(?P<S>[\d.,]+) (?P<U>[\w^_]+)'
+-    OFFLINE_PATTERN = r'>File does not exist on this server'
++    OFFLINE_PATTERN = r'>File does not exist on this server|File has expired and does not exist anymore on this server'
+
+     LINK_PREMIUM_PATTERN = r"document.location = '(.+?)'"
